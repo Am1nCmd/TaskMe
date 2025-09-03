@@ -4,12 +4,12 @@ import { Button } from "@heroui/react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-white">
+    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 py-20 bg-white">
       <div className="max-w-6xl mx-auto text-center">
         <div className="fade-in">
           <h1 className="text-5xl md:text-7xl font-semibold text-gray-900 tracking-tight mb-6 leading-none">
             TaskMe —<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500">
+            <span className="gradient-text">
               Your Tasks, Simplified.
             </span>
           </h1>
@@ -22,7 +22,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
               size="lg"
-              className="bg-blue-600 text-white px-8 py-6 text-lg font-medium hover:bg-blue-700 transition-colors duration-200 min-w-48 flex items-center justify-center rounded-2xl"
+              className="bg-blue-600 text-white px-8 py-6 text-lg font-medium hover:bg-blue-700 button-hover min-w-48 flex items-center justify-center rounded-2xl"
               radius="lg"
             >
               Get Started
@@ -30,7 +30,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="ghost"
-              className="text-blue-600 px-8 py-6 text-lg font-medium hover:bg-blue-50 transition-colors duration-200 min-w-48 flex items-center justify-center rounded-2xl border border-blue-200"
+              className="text-blue-600 px-8 py-6 text-lg font-medium hover:bg-blue-50 button-hover min-w-48 flex items-center justify-center rounded-2xl border border-blue-200"
               radius="lg"
             >
               Learn More

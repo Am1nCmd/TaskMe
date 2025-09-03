@@ -4,7 +4,7 @@ import { Button } from "@heroui/react";
 
 export default function CTASection() {
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 relative overflow-hidden">
+    <section id="contact" className="py-24 px-6 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
