@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   description: "From digital services to creative solutions, TaskMe handles it all. A sub-brand of ams1gn.id",
   keywords: ["tasks", "digital services", "creative solutions", "web development", "virtual assistance"],
   authors: [{ name: "ams1gn.id" }],
+  icons: {
+    icon: [
+      { url: '/taskme-icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export const viewport = {
