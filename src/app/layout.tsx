@@ -13,6 +13,40 @@ export const metadata: Metadata = {
   description: "From digital services to creative solutions, TaskMe handles it all. A sub-brand of ams1gn.id",
   keywords: ["tasks", "digital services", "creative solutions", "web development", "virtual assistance"],
   authors: [{ name: "ams1gn.id" }],
+  metadataBase: new URL('https://taskme.com'),
+  openGraph: {
+    title: "TaskMe — Your Tasks, Simplified.",
+    description: "From digital services to creative solutions, TaskMe handles it all. A sub-brand of ams1gn.id",
+    url: "https://taskme.com",
+    siteName: "TaskMe",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TaskMe - Your Tasks, Simplified",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TaskMe — Your Tasks, Simplified.",
+    description: "From digital services to creative solutions, TaskMe handles it all. A sub-brand of ams1gn.id",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
     icon: [
       { url: '/taskme-icon.svg', type: 'image/svg+xml' },

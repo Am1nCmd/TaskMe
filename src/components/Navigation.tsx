@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@heroui/react";
+import Image from "next/image";
 
 const navigationItems = [
   { name: "Home", href: "#home" },
@@ -61,11 +62,13 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+            <Image
               src="/taskme-icon.svg" 
               alt="TaskMe Icon"
+              width={32}
+              height={32}
               className="w-8 h-8"
+              priority
             />
             <span className="text-2xl font-semibold text-gray-900">TaskMe</span>
           </div>
