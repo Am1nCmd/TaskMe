@@ -131,7 +131,7 @@ export default function PricingSection() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {pricingPlans.map((plan, index) => (
             <Card
-              key={index}
+              key={`pricing-plan-${plan.name}`}
               className={`relative ${
                 plan.popular 
                   ? 'glass card-hover bg-white/80 border-2 border-blue-200 shadow-2xl scale-105 z-10' 
@@ -193,9 +193,9 @@ export default function PricingSection() {
 
                 {/* Features */}
                 <div className="space-y-4">
-                  <div className="text-sm font-medium text-gray-900 mb-4">What's included:</div>
+                  <div className="text-sm font-medium text-gray-900 mb-4">What&apos;s included:</div>
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-3">
+                    <div key={`${plan.name}-feature-${idx}-${feature.slice(0, 10)}`} className="flex items-center space-x-3">
                       <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
                         <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -206,7 +206,7 @@ export default function PricingSection() {
                   ))}
                   
                   {plan.limitations.map((limitation, idx) => (
-                    <div key={idx} className="flex items-center space-x-3 opacity-50">
+                    <div key={`${plan.name}-limitation-${idx}-${limitation.slice(0, 10)}`} className="flex items-center space-x-3 opacity-50">
                       <div className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
                         <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -253,7 +253,7 @@ export default function PricingSection() {
               </thead>
               <tbody>
                 {comparisonFeatures.map((row, index) => (
-                  <tr key={index} className={`${index % 2 === 0 ? 'bg-gray-50/50' : ''}`}>
+                  <tr key={`comparison-${row.feature.replace(/\s+/g, '-').toLowerCase()}`} className={`${index % 2 === 0 ? 'bg-gray-50/50' : ''}`}>
                     <td className="py-4 font-medium text-gray-900">{row.feature}</td>
                     <td className="text-center py-4 text-gray-600">{row.starter}</td>
                     <td className="text-center py-4 text-gray-600">{row.pro}</td>

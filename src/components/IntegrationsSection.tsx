@@ -114,7 +114,7 @@ const integrationStats = [
 
 export default function IntegrationsSection() {
   const [activeCategory, setActiveCategory] = useState('all');
-  const [selectedIntegration, setSelectedIntegration] = useState(null);
+  const [selectedIntegration, setSelectedIntegration] = useState<number | null>(null);
 
   const categories = ['all', 'Communication', 'Productivity', 'Project Management', 'CRM', 'Marketing', 'Automation'];
   
@@ -267,11 +267,11 @@ export default function IntegrationsSection() {
           <Card className="glass bg-white/40 border border-white/30 max-w-4xl mx-auto">
             <CardBody className="p-12">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Don't see your tool?
+                Don&apos;t see your tool?
               </h3>
               <p className="text-gray-600 font-light mb-8 max-w-2xl mx-auto leading-relaxed">
-                We're constantly adding new integrations based on customer demand. 
-                Let us know what you need and we'll prioritize it.
+                We&apos;re constantly adding new integrations based on customer demand. 
+                Let us know what you need and we&apos;ll prioritize it.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

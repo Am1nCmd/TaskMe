@@ -107,6 +107,36 @@ const useCountUp = (end: number, duration: number = 2000) => {
   return count;
 };
 
+// Component for individual metric card with animated counter
+const MetricCard = ({ metric, index }: { metric: typeof realTimeMetrics[0], index: number }) => {
+  const animatedValue = useCountUp(metric.value, 2000);
+  
+  return (
+    <Card
+      className="glass card-hover bg-white/60 border border-white/20"
+      style={{ animationDelay: `${index * 150}ms` }}
+    >
+      <CardBody className="p-6">
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-2xl">{metric.icon}</div>
+          <div className={`flex items-center text-sm font-medium ${
+            metric.trend === 'up' ? 'text-green-600' : 'text-red-600'
+          }`}>
+            <svg className={`w-4 h-4 mr-1 ${metric.trend === 'down' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
+            </svg>
+            {metric.change}
+          </div>
+        </div>
+        <div className="text-3xl font-bold text-gray-900 mb-1">
+          {animatedValue.toLocaleString()}{metric.unit}
+        </div>
+        <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
+      </CardBody>
+    </Card>
+  );
+};
+
 export default function MetricsDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
 
@@ -155,34 +185,9 @@ export default function MetricsDashboard() {
           <div className="space-y-8">
             {/* Real-time metrics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {realTimeMetrics.map((metric, index) => {
-                const animatedValue = useCountUp(metric.value, 2000);
-                return (
-                  <Card
-                    key={index}
-                    className="glass card-hover bg-white/60 border border-white/20"
-                    style={{ animationDelay: `${index * 150}ms` }}
-                  >
-                    <CardBody className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="text-2xl">{metric.icon}</div>
-                        <div className={`flex items-center text-sm font-medium ${
-                          metric.trend === 'up' ? 'text-green-600' : 'text-red-600'
-                        }`}>
-                          <svg className={`w-4 h-4 mr-1 ${metric.trend === 'down' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                          </svg>
-                          {metric.change}
-                        </div>
-                      </div>
-                      <div className="text-3xl font-bold text-gray-900 mb-1">
-                        {animatedValue.toLocaleString()}{metric.unit}
-                      </div>
-                      <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
-                    </CardBody>
-                  </Card>
-                );
-              })}
+              {realTimeMetrics.map((metric, index) => (
+                <MetricCard key={`metric-${metric.label}-${index}`} metric={metric} index={index} />
+              ))}
             </div>
 
             {/* Recent activity feed */}

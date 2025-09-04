@@ -104,7 +104,7 @@ export default function InvestorSection() {
                       </span>
                     </div>
                     <blockquote className="text-gray-600 font-light italic leading-relaxed">
-                      "{investor.quote}"
+                      &ldquo;{investor.quote}&rdquo;
                     </blockquote>
                   </div>
                 </div>
@@ -117,10 +117,10 @@ export default function InvestorSection() {
         <div className="text-center">
           <div className="glass rounded-3xl p-12 bg-white/40 border border-white/30 backdrop-blur-xl">
             <div className="max-w-4xl mx-auto">
-              <div className="text-6xl text-gray-300 mb-6">"</div>
+              <div className="text-6xl text-gray-300 mb-6">&ldquo;</div>
               <blockquote className="text-2xl md:text-3xl font-light text-gray-700 mb-8 leading-relaxed">
-                TaskMe represents the future of work—seamless, intelligent, and incredibly efficient. 
-                They're not just automating tasks; they're elevating human potential.
+                TaskMe represents the future of work&mdash;seamless, intelligent, and incredibly efficient. 
+                They&apos;re not just automating tasks; they&apos;re elevating human potential.
               </blockquote>
               <div className="flex items-center justify-center space-x-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
@@ -128,7 +128,7 @@ export default function InvestorSection() {
                 </div>
                 <div className="text-left">
                   <div className="font-semibold text-gray-900">Forbes Technology</div>
-                  <div className="text-sm text-gray-600">Editor's Choice Award 2024</div>
+                  <div className="text-sm text-gray-600">Editor&apos;s Choice Award 2024</div>
                 </div>
               </div>
             </div>

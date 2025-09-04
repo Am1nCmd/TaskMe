@@ -261,7 +261,7 @@ export default function TeamSection() {
           <div className="glass rounded-3xl p-12 bg-white/40 border border-white/30">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Join Our Mission</h3>
             <p className="text-gray-600 font-light mb-8 max-w-2xl mx-auto">
-              We're always looking for passionate individuals who want to shape the future of work. 
+              We&apos;re always looking for passionate individuals who want to shape the future of work. 
               Join us in building technology that empowers human potential.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
