@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button, Input, Textarea, Card, CardBody } from "@heroui/react";
+import { Button, Card, CardBody } from "@heroui/react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -47,7 +47,7 @@ export default function ContactSection() {
           <div className="text-white">
             <div className="fade-in">
               <h2 className="text-4xl md:text-6xl font-semibold mb-8 tracking-tight">
-                Let's work<br />
+                Let&apos;s work<br />
                 together.
               </h2>
               
