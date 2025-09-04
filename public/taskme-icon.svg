@@ -2,9 +2,12 @@
   <!-- White/transparent background -->
   <rect width="512" height="512" rx="115" fill="#FFFFFF"/>
   
-  <!-- Black square brackets [] -->
-  <rect x="96" y="96" width="320" height="320" rx="40" stroke="#000000" stroke-width="32" fill="none"/>
+  <!-- Left bracket [ -->
+  <path d="M160 120 L120 120 L120 392 L160 392" stroke="#000000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  
+  <!-- Right bracket ] -->
+  <path d="M352 120 L392 120 L392 392 L352 392" stroke="#000000" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
   
   <!-- Green checkmark inside brackets -->
-  <path d="M176 256L240 320L336 224" stroke="#00D647" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M200 256L240 296L312 224" stroke="#00D647" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

@@ -60,7 +60,12 @@ export default function Navigation() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-2">
+            <img 
+              src="/taskme-icon.svg" 
+              alt="TaskMe Icon"
+              className="w-8 h-8"
+            />
             <span className="text-2xl font-semibold text-gray-900">TaskMe</span>
           </div>
 
