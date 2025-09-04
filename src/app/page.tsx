@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
 import FeaturesSection from "@/components/FeaturesSection";
+import ProductShowcase from "@/components/ProductShowcase";
 
 const ProcessSection = lazy(() => import("@/components/ProcessSection"));
 const ShowcaseSection = lazy(() => import("@/components/ShowcaseSection"));
@@ -18,6 +19,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <FeaturesSection />
+      <ProductShowcase />
       <Suspense fallback={<div className="py-24 flex justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
         <ProcessSection />
       </Suspense>

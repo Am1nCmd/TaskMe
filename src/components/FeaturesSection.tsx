@@ -47,32 +47,32 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section id="services" className="py-24 px-6 bg-gray-50">
+    <section id="services" className="py-32 px-6 bg-gradient-to-b from-white to-gray-50/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+        <div className="text-center mb-20 scale-in">
+          <h2 className="text-5xl md:text-6xl text-thin text-gray-900 mb-8 leading-tight">
             Everything you need.
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Professional services designed to help your business thrive.
+          <p className="text-lg text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
+            Professional services designed to help your business thrive in the digital age.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="slide-up" style={{ animationDelay: `${index * 150}ms` }}>
-              <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 bg-white border-0 shadow-sm rounded-2xl" radius="lg">
-                <CardBody className="p-8">
-                  <div className="text-blue-600 mb-4">
+              <Card className="h-full glass card-hover bg-white/60 border border-white/20 shadow-lg rounded-3xl backdrop-blur-xl" radius="lg">
+                <CardBody className="p-10">
+                  <div className="text-blue-600 mb-6 p-4 bg-blue-50/50 rounded-2xl w-fit">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4 tracking-tight">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+                  <p className="text-gray-600 leading-relaxed mb-6 font-light">
                     {feature.description}
                   </p>
-                  <div className="inline-block bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="inline-block bg-gradient-to-r from-blue-50 to-blue-100/80 text-blue-600 px-4 py-2 rounded-full text-sm font-medium border border-blue-100">
                     Starting at {feature.startingPrice}
                   </div>
                 </CardBody>
